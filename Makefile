@@ -3,7 +3,7 @@ CXX = g++
 CFLAGS = -std=c99 -Wall -lm
 CXXFLAGS = -std=c++11 -Wall
 
-C_SRCS = $(wildcard src/*.c)
+C_SRCS = $(wildcard src/!.c)
 C_OUTS = $(patsubst %.c, %, $(C_SRCS))
 CXX_SRCS = $(wildcard src/*.cpp)
 CXX_OUTS = $(patsubst %.cpp, %, $(CXX_SRCS))
@@ -20,4 +20,4 @@ all: $(C_OUTS) $(CXX_OUTS)
 
 clean:
 	$(RM) $(C_OUTS) $(CXX_OUTS)
- 
+  
